@@ -1,0 +1,86 @@
+﻿@model Tripper.Models.Compras
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Compras</h4>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-8 ">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="row g-3 align-items-center mb-3">
+                <div class="col-2">
+                    <label asp-for="ProdutosId" class="col-form-label"></label>
+                </div>
+                <div class="col-6">
+                    <select asp-for="ProdutosId" class="form-control" asp-items="ViewBag.ProdutosId"></select>
+                </div>
+                <div class="col-2">
+                    <span class="form-text">
+                        Selecione o Produto
+                    </span>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-3">
+                <div class="col-2">
+                    <label asp-for="FornecedoresId" class="col-form-label"></label>
+                </div>
+                <div class="col-6">
+                    <select asp-for="FornecedoresId" class="form-control" asp-items="ViewBag.FornecedoresId"></select>
+                </div>
+                <div class="col-auto">
+                    <span class="form-text">
+                        Selecione o Produto
+                    </span>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-3">
+                <div class="col-2">
+                    <label for="quantidade" class="control-label">Quantidade Unitária</label>
+                </div>
+                <div class="col-6">
+                    <input id="quantidade" name="quantidade" class="form-control" />
+                    @if (TempData["Erro"] != null)
+                    {
+                        <span class="text-danger">@TempData["Erro"]</span>
+                    }
+                </div>
+                <div class="col-auto">
+                    <span class="form-text">
+                        Selecione uma quantidade maior que zero
+                    </span>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-3">
+                <div class="col-2">
+                    <label asp-for="Data" class="control-label"></label>
+                </div>
+                <div class="col-6">
+                    <input asp-for="Data" class="form-control" />
+                    <span asp-validation-for="Data" class="text-danger"></span>
+                </div>
+                <div class="col-auto">
+                    <span class="form-text">
+                        Selecione uma quantidade maior que zero
+                    </span>
+                </div>
+            </div>
+            <div class="row g-3 align-items-center mb-3">
+                <div class="col-2"></div>
+                <div class="col-10">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
