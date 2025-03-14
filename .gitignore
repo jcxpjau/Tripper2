@@ -1,0 +1,15 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/Program.cs
+*.vsidx
+/obj/Debug/net8.0/Tripper.AssemblyInfoInputs.cache
+/obj/Debug/net8.0/Tripper.AssemblyInfo.cs
+/.vs/ProjectEvaluation/tripper.metadata.v9.bin
+/.vs/ProjectEvaluation/tripper.projects.v9.bin
+/.vs/ProjectEvaluation/tripper.strings.v9.bin
+/.vs/Tripper/DesignTimeBuild/.dtbcache.v2
+/.vs/Tripper/v17/DocumentLayout.json
+/.vs/Tripper/v17/DocumentLayout.backup.json
+/.vs/Tripper/v17/.suo
